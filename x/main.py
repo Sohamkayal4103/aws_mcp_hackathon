@@ -9,23 +9,23 @@ load_dotenv()
 
 # Fake campaign data
 fake_campaigns = [
-    {
-        "id": 1,
-        "title": "Summer Sale Promo",
-        "description": "Get ready for our big summer sale! Up to 50% off on all items. #SummerSale",
-        "tweeted": False
-    },
-    {
-        "id": 2,
-        "title": "New Product Launch",
-        "description": "Introducing our latest gadget! Innovative, sleek, and powerful. #NewRelease",
-        "tweeted": False
-    },
+    # {
+    #     "id": 1,
+    #     "title": "Summer Sale Promo",
+    #     "description": "Get ready for our big summer sale! Up to 50% off on all items. #SummerSale",
+    #     "tweeted": False
+    # },
+    # {
+    #     "id": 2,
+    #     "title": "New Product Launch",
+    #     "description": "Introducing our latest gadget! Innovative, sleek, and powerful. #NewRelease",
+    #     "tweeted": False
+    # },
     {
         "id": 3,
         "title": "Holiday Special",
         "description": "Celebrate the holidays with our exclusive deals! Limited time offer. #HolidayDeals",
-        "tweeted": True
+        "tweeted": False
     }
 ]
 
