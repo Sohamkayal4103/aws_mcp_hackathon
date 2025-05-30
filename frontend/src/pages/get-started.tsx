@@ -40,7 +40,7 @@ export default function GetStarted() {
       await axios.post("http://localhost:4000/api/users", form, {
         withCredentials: true,
       });
-      router.push("/profile");
+      router.push("/");
     } catch (err) {
       console.error(err);
       toaster.create({

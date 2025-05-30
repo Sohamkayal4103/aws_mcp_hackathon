@@ -18,7 +18,7 @@ export function useEnsureUser() {
           { withCredentials: true }
         );
         if (resp.data.exists) {
-          router.replace("/profile");
+          router.replace("/");
         } else {
           router.replace("/get-started");
         }

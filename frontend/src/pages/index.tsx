@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Head from "next/head";
 // import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -5,6 +6,21 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useEnsureUser } from "@/hooks/useEnsureUser";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Text,
+  Stack,
+  Icon,
+  SimpleGrid,
+  Center,
+} from "@chakra-ui/react";
+
+import { Button } from "@chakra-ui/react";
+import { FaRocket, FaClock, FaCogs, FaChartLine } from "react-icons/fa";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +48,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
+      {/* <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         Home Page
@@ -49,7 +65,99 @@ export default function Home() {
             <Link href="/auth/login">Log In</Link>
           </div>
         )}
-      </div>
+      </div> */}
+      <Navbar />
+      <Center>
+        <Box>
+          <Container maxW="5xl" py={12}>
+            {/* Hero */}
+            <Stack textAlign="center" spacing={6} py={10}>
+              <Heading fontSize={{ base: "3xl", md: "4xl" }}>
+                Meet MarketGenie
+              </Heading>
+              <Text fontSize={{ base: "lg", md: "xl" }}>
+                Your AI Marketing Agent: Auto-generate & schedule multi-platform
+                posts in seconds.
+              </Text>
+              <Stack
+                direction={{ base: "column", sm: "row" }}
+                spacing={3}
+                justify="center"
+              >
+                <Button
+                  as="a"
+                  href="/auth/login"
+                  colorScheme="blue"
+                  px={6}
+                  size="lg"
+                  rounded="full"
+                >
+                  Get Started
+                </Button>
+                <Button
+                  as="a"
+                  href="#features"
+                  variant="outline"
+                  px={6}
+                  size="lg"
+                  rounded="full"
+                >
+                  Learn More
+                </Button>
+              </Stack>
+            </Stack>
+
+            {/* Features */}
+            <Box id="features" pt={12}>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                <Feature
+                  icon={FaRocket}
+                  title="Fast Setup"
+                  text="Sign up, enter your campaign details, and let MarketGenie handle the rest—no learning curve."
+                />
+                <Feature
+                  icon={FaClock}
+                  title="Schedule at Scale"
+                  text="Automatically generate and schedule dozens of posts across platforms with optimal timing."
+                />
+                <Feature
+                  icon={FaCogs}
+                  title="Fully Customizable"
+                  text="Edit titles, descriptions, and post types before publishing for full control."
+                />
+                <Feature
+                  icon={FaChartLine}
+                  title="Data-Driven"
+                  text="Leverage AI insights to tailor content to your target audience and budget."
+                />
+              </SimpleGrid>
+            </Box>
+          </Container>
+        </Box>
+      </Center>
     </>
+  );
+}
+
+function Feature({ icon, title, text }) {
+  return (
+    <Stack align="flex-start" spacing={4}>
+      <Flex
+        align="center"
+        justify="center"
+        w={12}
+        h={12}
+        rounded="full"
+        bg="blue.100"
+      >
+        <Icon as={icon} w={6} h={6} color="blue.500" />
+      </Flex>
+      <Box>
+        <Heading fontSize="xl" mb={2}>
+          {title}
+        </Heading>
+        <Text>{text}</Text>
+      </Box>
+    </Stack>
   );
 }
