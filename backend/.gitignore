@@ -1,0 +1,42 @@
+# Node dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dotenv environment variables file
+.env
+
+# Build outputs (if you ever compile)
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage reports
+coverage/
+
+# Optional npm cache
+.npm/
+
+# ESLint cache
+.eslintcache
+
+# Lockfile backups
+*.lock
+
+# Misc logs
+*.log
