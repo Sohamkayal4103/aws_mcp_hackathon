@@ -18,6 +18,7 @@ MarketGenie lets small businesses and creators sign in via Auth0, define a campa
 - **Database**: AWS RDS (PostgreSQL)  
 - **AI Service**: Anthropic Claude via `@anthropic-ai/sdk`  
 - **Hosting**: Vercel for frontend, AWS for backend and database
+- - **Sponsors**: Anthropic for generating content, AWS (RDS & Lambda), Minmax for audio/video generation
 
   ## Archirecture :
   ![architecture](https://github.com/user-attachments/assets/c7fe6b3a-f7d0-42a7-92fc-3678c6acdca0)
