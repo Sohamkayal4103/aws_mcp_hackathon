@@ -14,7 +14,7 @@ MarketGenie lets small businesses and creators sign in via Auth0, define a campa
 
 ## Tech Stack 🚀  
 - **Frontend**: Next.js, React, Chakra UI, Auth0 SDK  
-- **Backend**: Node.js, Express.js, `pg` for PostgreSQL  
+- **Backend**: Node.js, Express.js, `pg` for PostgreSQL , Python
 - **Database**: AWS RDS (PostgreSQL)  
 - **AI Service**: Anthropic Claude via `@anthropic-ai/sdk`  
 - **Hosting**: Vercel for frontend, AWS for backend and database
